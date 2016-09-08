@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Registra pagamento</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/simples.css"/>
+</head>     
+<body>
+    <main>
+        <div class="conteiner">
+            <form id="formPagamento" class="form-horizontal">
+                <div class="form-group">
+                    <label for="matricula" class="col-sm-2">Matrícula :</label>
+                    <div class="col-sm-2">
+                        <input type="text" id="matricula" class="form-control" maxlength="11" pattern="\d\.?\d{3}\.?\d{3}-?\d" required autofocus/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataPagamento" class="col-sm-2">Data Pagamento: </label>
+                    <div class="col-sm-2">
+                        <input type="date" id="dataPagamento" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cota" class="col-sm-2">Cota: </label>
+                    <div class="col-sm-2">
+                        <select id="cota" class="form-control" required>
+                            <option selected></option>
+                            <option value="0.5">Meia</option>
+                            <option value="1">Inteira</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    Enviar
+                </button>
+            </form>
+        </div>
+        <table id="tabelaPagamentos" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Data</th>
+                    <th>Cota</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <script src="js/jquery-nao-abra.js"></script>
+    <script src="js/simples.js"></script>
+</body>
+</html>
